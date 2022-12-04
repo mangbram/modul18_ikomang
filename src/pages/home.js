@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 import { Grid } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
+backend = process.env.REACT_APP_BACKEND
 
 const theme = createTheme();
 
@@ -45,7 +46,7 @@ const Home = () => {
         // set isLogin menjadi true. bila tidak, redirect ke halaman login
         const verifikasi = async()=>{
             try{
-                const res = await axios.post(`${REACT_APP_BACKEND}/verify`,{
+                const res = await axios.post(`backend/verify`,{
                     token: localStorage.getItem('token')
                 })
                 if(res.status===200){
