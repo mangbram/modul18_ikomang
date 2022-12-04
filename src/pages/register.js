@@ -31,7 +31,7 @@ const Register = () => {
       const password = data.get('password')
       const email = data.get('email')
       if (username!=='' && password!=='' && email!==''){
-        axios.post('http://localhost:3000/register',{
+        axios.post(`${REACT_APP_BACKEND}/register`,{
           // body yang digunakan adalah username, email, dan password
           username: username,
           email: email,
