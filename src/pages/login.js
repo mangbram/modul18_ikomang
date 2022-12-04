@@ -28,7 +28,7 @@ const Login = () => {
       // Tambahkan kode di bawah ini untuk mengambil data dari localstorage
       // 1. Lakukan Axios POST ke backend pada endpoint /login di bawah ini,
       // dengan parameter 'email' dan 'pass' yang didapat dari form (clue ada pada line 23 dan 24).
-      const res = await axios.post('http://localhost:3000/login',{
+      const res = await axios.post(`${REACT_APP_BACKEND}/login`,{
         email: data.get('email'),
         password: data.get('password')
       })
