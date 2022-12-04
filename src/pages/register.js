@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+const backend = process.env.REACT_APP_BACKEND
 
 // Abaikan kode di bawah ini
 const theme = createTheme();
@@ -31,7 +32,7 @@ const Register = () => {
       const password = data.get('password')
       const email = data.get('email')
       if (username!=='' && password!=='' && email!==''){
-        axios.post(`${REACT_APP_BACKEND}/register`,{
+        axios.post(`${backend}/register`,{
           // body yang digunakan adalah username, email, dan password
           username: username,
           email: email,
