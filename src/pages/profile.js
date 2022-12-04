@@ -56,6 +56,7 @@ const Profile = () => {
               Navigate('/login')
             }
           } catch (err){
+            Navigate('/login)
             console.log(err)
           }
         }
